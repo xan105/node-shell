@@ -1,0 +1,76 @@
+{
+  "name": "@xan105/shell",
+  "version": "0.1.0",
+  "description": "Run external command or script",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./pwsh": {
+      "types": "./types/util/pwsh.d.ts",
+      "default": "./lib/util/pwsh.js"
+    }
+  },
+  "types": "./types/index.d.ts",
+  "files": [
+    "/lib",
+    "/types"
+  ],
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "lint": "eslint \"./lib/**/*.js\" \"./types/**/*.d.ts\"",
+    "test": "node --test test/",
+    "check": "tsc --noemit --checkJs",
+    "declare": "tsc --declaration --emitDeclarationOnly --outDir \"./types\""
+  },
+  "keywords": [
+    "shell",
+    "exec",
+    "child",
+    "process"
+  ],
+  "author": {
+    "name": "Anthony Beaumont",
+    "email": "dev.xan105@outlook.be",
+    "url": "https://xan105.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xan105/node-shell.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xan105/node-shell/issues"
+  },
+  "homepage": "https://github.com/xan105/node-shell#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/xan105"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/xan105"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/xan105"
+    }
+  ],
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "typescript-eslint": "7.5.0",
+    "@eslint/js": "^8.57.0",
+    "globals": "^14.0.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@xan105/error": "^1.7.0",
+    "@xan105/is": "^2.9.3"
+  }
+}
