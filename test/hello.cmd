@@ -1,2 +1,2 @@
-echo "hello world"
-dir
+@echo off
+echo Hello world

@@ -71,6 +71,10 @@ Run external command or script.
  - `silent?: boolean` (false)
  
     Silent fail on error (no throw) when set to `true`
+    
+ - `escape?: boolean` (true)
+
+    When set to `true`, If the specified shell has an *escape char* different than `\`, escape it.
 
 **Return**
 
